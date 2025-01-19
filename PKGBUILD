@@ -21,7 +21,7 @@ build() {
     cd "$srcdir/$pkgname"
     mkdir -p build
     cd build
-    ./tools/configure ../tools/configure --target=sdlapp --type=N --lcdwidth=320 --lcdheight=240 --prefix=/usr
+    ../tools/configure --target=sdlapp --type=N --lcdwidth=320 --lcdheight=240 --prefix=/usr
     make zig -j$(nproc)
 }
 
