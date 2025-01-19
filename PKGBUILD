@@ -35,4 +35,6 @@ build() {
 package() {
     cd "$srcdir/$pkgname"
     make DESTDIR="$pkgdir/" install
+    cp ../zig-out/bin/rockboxd "$pkgdir/usr/bin"
+    cp ../target/release/rockbox "$pkgdir/usr/bin"
 }
