@@ -7,7 +7,7 @@ pkgdesc="Open Source high quality audio player"
 arch=('x86_64' 'aarch64')
 url="https://github.com/tsirysndr/rockbox-zig"
 license=('GPL-2.0')
-depends=('sdl2' 'libunwind', 'alsa-lib')
+depends=('sdl2' 'libunwind' 'alsa-lib')
 makedepends=('git' 'rust' 'zig' 'sdl2' 'libunwind' 'rustup' 'cmake' 'protobuf' 'gcc13' 'make' 'autoconf' 'libtool' 'zip' 'deno' 'alsa-lib')
 source=("git+https://github.com/tsirysndr/rockbox-zig.git#tag=$pkgver")
 sha256sums=('SKIP')
