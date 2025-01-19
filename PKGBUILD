@@ -33,6 +33,9 @@ build() {
     rustup default stable
 
     cd "$srcdir/$pkgname"
+
+    sed -i '/libfirmware\.linkSystemLibrary("usb");/d' build.zig || true
+
     mkdir -p build
     cd build
     ../tools/configure --target=sdlapp --type=N --lcdwidth=320 --lcdheight=240 --prefix=/usr
