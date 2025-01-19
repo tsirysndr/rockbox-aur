@@ -43,9 +43,8 @@ build() {
 }
 
 package() {
-    cd "$srcdir/$pkgname"
+    cd "$srcdir/$pkgname/build"
     mkdir -p "$pkgdir/usr/bin"
-    cd build
     make PREFIX="$pkgdir/usr" install
     cp ../zig-out/bin/rockboxd "$pkgdir/usr/bin"
     cp ../target/release/rockbox "$pkgdir/usr/bin"
