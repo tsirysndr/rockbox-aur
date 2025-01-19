@@ -18,6 +18,12 @@ prepare() {
 }
 
 build() {
+    mkdir -p /tmp/bin
+    export PATH=/tmp/bin:$PATH
+    for bin in /usr/bin/*-13; do
+      ln -s "$bin" "/tmp/bin/$(basename "$bin" -13)"
+    done
+
     cd "$srcdir/$pkgname"
     cd webui/rockbox
     deno install
