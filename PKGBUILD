@@ -40,7 +40,7 @@ build() {
 
 package() {
     cd "$srcdir/$pkgname"
-    make PREFIX="$pkgdir/" install
+    make PREFIX="$pkgdir/usr" install
     cp ../zig-out/bin/rockboxd "$pkgdir/usr/bin"
     cp ../target/release/rockbox "$pkgdir/usr/bin"
 }
