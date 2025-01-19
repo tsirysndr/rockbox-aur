@@ -8,7 +8,7 @@ arch=('x86_64')
 url="https://github.com/tsirysndr/rockbox-zig"
 license=('GPL-2.0')
 depends=('sdl2' 'libunwind')
-makedepends=('git' 'rust' 'zig' 'sdl2' 'libunwind' 'rustup' 'cmake' 'protobuf' 'base-devel' 'zip' 'deno')
+makedepends=('git' 'rust' 'zig' 'sdl2' 'libunwind' 'rustup' 'cmake' 'protobuf' 'gcc13' 'make' 'autoconf' 'libtool' 'zip' 'deno')
 source=("git+https://github.com/tsirysndr/rockbox-zig.git#tag=$pkgver")
 sha256sums=('SKIP')
 
@@ -34,7 +34,7 @@ build() {
 
 package() {
     cd "$srcdir/$pkgname"
-    make DESTDIR="$pkgdir/" install
+    make PREFIX="$pkgdir/" install
     cp ../zig-out/bin/rockboxd "$pkgdir/usr/bin"
     cp ../target/release/rockbox "$pkgdir/usr/bin"
 }
