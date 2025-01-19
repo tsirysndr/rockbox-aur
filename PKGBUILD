@@ -18,7 +18,8 @@ prepare() {
 }
 
 build() {
-    mkdir -p /tmp/bin
+    rm -rf /tmp/bin
+    mkdir /tmp/bin
     export PATH=/tmp/bin:$PATH
     for bin in /usr/bin/*-13; do
       ln -s "$bin" "/tmp/bin/$(basename "$bin" -13)"
