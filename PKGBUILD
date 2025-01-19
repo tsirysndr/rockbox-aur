@@ -8,7 +8,7 @@ arch=('x86_64')
 url="https://github.com/tsirysndr/rockbox-zig"
 license=('GPL-2.0')
 depends=('sdl2' 'libunwind')
-makedepends=('git' 'rust' 'zig' 'sdl2' 'libunwind' 'rustup' 'cmake' 'protobuf' 'base-devel')
+makedepends=('git' 'rust' 'zig' 'sdl2' 'libunwind' 'rustup' 'cmake' 'protobuf' 'base-devel' 'zip')
 source=("git+https://github.com/tsirysndr/rockbox-zig.git#tag=$pkgver")
 sha256sums=('SKIP')
 
@@ -18,6 +18,7 @@ prepare() {
 }
 
 build() {
+    rustup default stable
     cd "$srcdir/$pkgname"
     mkdir -p build
     cd build
