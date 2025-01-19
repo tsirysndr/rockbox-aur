@@ -14,6 +14,8 @@ pkgbase = rockbox-zig
         makedepends = cmake
         makedepends = protobuf
         makedepends = base-devel
+        makedepends = zip
+        makedepends = deno
         depends = sdl2
         depends = libunwind
         source = git+https://github.com/tsirysndr/rockbox-zig.git#tag=2025.01.18
