@@ -23,7 +23,7 @@ build() {
     mkdir -p build
     cd build
     ../tools/configure --target=sdlapp --type=N --lcdwidth=320 --lcdheight=240 --prefix=/usr
-    make zig -j$(nproc)
+    TAG=$pkgver make zig -j$(nproc)
 }
 
 package() {
