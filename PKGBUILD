@@ -1,7 +1,7 @@
 # Maintainer: Tsiry Sandratraina <tsiry.sndr@fluentci.io>
 
 pkgname=rockbox-zig
-pkgver=2025.01.18
+pkgver=2025.01.26
 pkgrel=1
 pkgdesc="Open Source high quality audio player"
 arch=('x86_64' 'aarch64')
